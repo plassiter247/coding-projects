@@ -1,15 +1,3 @@
-let three = function(){
-    let x = 3
-    return x
-}
-
-let outputOfThree = three()
-console.log(outputOfThree)
-
-let tres = three
-console.log(tres)
-console.log(tres())
-
 // call a function
 // run a function
 // execute a function
@@ -111,3 +99,71 @@ console.assert(greet("Patrick") === "Howdy, Patrick!")
 console.assert(greet(undefined) === "Howdy, friend!")
 console.assert(greet() === "Howdy, friend!")
 console.assert(greet(null) === "Howdy, null!")
+
+
+const select = document.querySelector('Select');
+let paragraph = document.querySelector("#");
+
+// Weather App
+
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+    const choice = select.value;
+    let paragraph = document.createElement('p')
+    
+
+    if (choice === 'sunny') {
+        paragraph.appendChild = `<p>It is nice and sunny outside today. Wear shorts! Go to the beach, 
+        or the park, and get an ice cream.</p>`;
+        
+
+    } else if (choice === 'rainy') {
+        paragraph.innerHTML = `<p>Rain is falling outside; take a rain coat and an umbrella, and
+        don't stay out for too long.</p>`;
+
+    } else if (choice === 'snowing') {
+        paragraph.innerHTML = `<p>The snow is coming down, it is freezing! Best to stay in with a 
+        cup of hot chocolate, or build a snowman.</p>`;
+
+    } else if (choice === 'overcast') {
+        paragraph.innerHTML = `<p>It isn't raining but the sky is grey and gloomy; it could turn any minute
+        so take a rain coat just in case</p>`;
+
+    } else {
+        paragraph.innerHTML = '';
+    }
+
+    
+
+}
+
+// Arrays
+let unconventionalPets = [
+    "lizard",
+    "hippogryph",
+    "pig",
+    "cow",
+    "fox",
+    "capybara",
+    "zebra",
+    "racoon",
+    "Alexa",
+    "unicorn duck",
+] 
+
+for (let index = 0; index < unconventionalPets.length; index += 1) {
+    let currentPet = unconventionalPets[index]
+    //..
+    console.log(currentPet)
+}
+
+
+
+
+
+let priceChanges = [0, -0.50, +0.25, +0.3]
+
+let pollResponses = [true, false, true, true, false]
+let whatever = [null, undefined, 0, "", NaN]
+
